@@ -18,20 +18,16 @@
  ***************************************************************************/
 
 //! \note do not move this pre-processor statement to other places
-#include "..\app_cfg.h"
+//#include "..\app_cfg.h"
 
 #ifndef __GUI_APP_CFG_H__
 #define __GUI_APP_CFG_H__
 
-/*============================ INCLUDES ======================================*/
-//! \brief import head files
-#include ".\utilities\compiler.h"
-#include ".\utilities\usebits.h"
-#include ".\utilities\tiny_fsm.h"
-#include ".\utilities\communicate.h"
-#include ".\utilities\template\template.h"
 
 /*============================ MACROS ========================================*/
+//! cpu info
+#   define __CPU_ARM__                      //!< arm series
+#   define __CORTEX_M0__                    //!< cortex-m0
 
 //! define enable macro
 #ifdef ENABLED
@@ -47,6 +43,14 @@
 
 //! \brief enable gui service
 #define USE_SERVICE_GUI_TGUI    ENABLED
+
+/*============================ INCLUDES ======================================*/
+//! \brief import head files
+#include ".\utilities\compiler.h"
+#include ".\utilities\usebits.h"
+#include ".\utilities\tiny_fsm.h"
+#include ".\utilities\communicate.h"
+#include ".\utilities\template\template.h"
 
 /*============================ MACROFIED FUNCTIONS ===========================*/
 /*============================ TYPES =========================================*/
